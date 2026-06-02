@@ -1,1 +1,114 @@
+# GABANeuron-GEM
+
+## Overview
+
+This repository contains the code, transcriptomic data processing workflow, and genome-scale metabolic models (GEMs) used to reconstruct and analyze human GABAergic neuron metabolism across the cognitive impairment–Alzheimer's disease continuum.
+
+The reconstruction pipeline integrates transcriptomic deconvolution data with the Recon3D human metabolic network using constraint-based modeling approaches to generate context-specific metabolic models.
+
+The resulting models represent:
+
+* Control (Basal) GABAergic neurons
+* Early Mild Cognitive Impairment (E-MCI)
+* Late Mild Cognitive Impairment (L-MCI)
+* Alzheimer's Disease (AD)
+
+The repository also includes quality control, model validation, and gapfilling procedures.
+
+---
+
+## Methodology
+
+### 1. Transcriptomic Processing
+
+Gene expression profiles were obtained from publicly available transcriptomic datasets and processed to generate cell-type-specific expression matrices.
+
+### 2. Gene Identifier Conversion
+
+Gene identifiers were standardized and mapped between Entrez and Ensembl databases.
+
+### 3. Reaction Expression Mapping
+
+Gene expression values were mapped to metabolic reactions using Gene-Protein-Reaction (GPR) associations contained in Recon3D.
+
+### 4. Tissue-Specific Reconstruction
+
+Context-specific metabolic models were generated using the INIT algorithm implemented within the COBRA Toolbox framework.
+
+### 5. Quality Control
+
+The reconstructed models were evaluated through:
+
+* Flux consistency analysis
+* Mass and charge balance verification
+* Dead-end metabolite detection
+* Functional optimization tests
+
+### 6. Gapfilling
+
+Metabolic gaps were resolved using reactions from the Recon3D universal network to ensure network functionality while preserving biological relevance.
+
+### 7. Model Validation
+
+The final models were validated through metabolic task testing and flux balance analysis.
+
+---
+
+## Software Requirements
+
+* MATLAB R2025a or later
+* COBRA Toolbox v3.0+
+* Gurobi Optimizer
+* Recon3D metabolic reconstruction
+
+---
+
+## Main Output Models
+
+| Model              | Description                           |
+| ------------------ | ------------------------------------- |
+| GABANeuron_Control | Basal GABAergic neuron model          |
+| GABANeuron_EMCI    | Early mild cognitive impairment model |
+| GABANeuron_LMCI    | Late mild cognitive impairment model  |
+| GABANeuron_AD      | Alzheimer's disease model             |
+
+---
+
+## Applications
+
+These models can be used for:
+
+* Flux Balance Analysis (FBA)
+* Flux Variability Analysis (FVA)
+* Metabolic pathway characterization
+* Neurodegenerative disease research
+* Biomarker discovery
+* Constraint-based systems biology studies
+
+---
+
+## Citation
+
+If you use this repository, please cite:
+
+**Angarita-Rodríguez A., et al.** 
+Genome-scale metabolic modeling of human GABAergic neurons reveals progressive metabolic reprogramming across the mild cognitive impairment–Alzheimer's disease continuum.
+
+---
+
+## License
+
+This repository is distributed under the MIT License.
+
+---
+
+## Contact
+
+Andrea Angarita-Rodríguez
+
+PhD Candidate in Biological Sciences
+
+Pontificia Universidad Javeriana
+
+Bogotá, Colombia
 
