@@ -33,7 +33,7 @@ Gene expression values were mapped to metabolic reactions using Gene-Protein-Rea
 
 ### 4. Tissue-Specific Reconstruction
 
-Context-specific metabolic models were generated using the INIT algorithm implemented within the COBRA Toolbox framework.
+Context-specific metabolic models were generated using the exp2flux algorithm implemented within the COBRA Toolbox framework.
 
 ### 5. Quality Control
 
